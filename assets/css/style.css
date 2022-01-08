@@ -1,3 +1,10 @@
+:root {
+    --main-green: #0af70a;
+    --main-black: #000101;
+    --accent: #c9c9c9;
+    /*#2a6041*/
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +13,7 @@
 
 body {
     font-family: Helvetica, Arial, sans-serif;
-    color: #2a6041;
+    color: var(--main-green);
 }
 
 header {
@@ -14,29 +21,32 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: #090909;
+    background-color: var(--main-black);
 }
 
 header h1 {
-    color: #2a6041;
+    color: var(--main-green);
     font-weight: bold;
     font-size: 36px;
     margin: 0;
+    opacity: 0;
+    position: absolute;
 }
 
 header a {
     text-decoration: none;
-    color: #2a6041;
+    color: var(--main-green);
 }
 
 header nav {
-    margin: 7px 0;
+    margin: 7px auto;
+    width: 50%;
 }
 
 header nav ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     list-style: none;
 }
@@ -44,9 +54,24 @@ header nav ul {
 header nav ul li a {
     margin: 0 30px;
     font-weight: lighter;
-    font-size: 1.55vw;
+    font-size: 25px;
 }
 
 .section-title {
     font-size: 26px;
 }
+
+.hero {
+    background-color: var(--main-black);
+    display: flex;
+    align-items: center;
+    align-content:center;
+}
+
+.logo {
+    width: 800px;
+    height: 800px;
+    object-fit: cover;
+    object-position: center;
+}
+
